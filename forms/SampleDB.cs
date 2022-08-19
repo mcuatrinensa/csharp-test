@@ -1,4 +1,5 @@
 ﻿using Npgsql;
+using Dapper;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,6 +8,11 @@ using System.Threading.Tasks;
 
 namespace forms
 {
+    internal class Row
+    {
+        public string foo;
+    }
+
     internal class SampleDB
     {
         public static async Task<string> ExecuteQuery()
@@ -19,8 +25,8 @@ namespace forms
             using (var conn = new NpgsqlConnection(connectionString))
             {
                 await conn.OpenAsync();
-                var cmd = new NpgsqlCommand("select x from (values ('foo')) t (x)", conn);
-                return (await cmd.ExecuteScalarAsync())?.ToString();
+                var result = await conn.QueryAsync<Row>("select * from (values ('bar')) t (foo)");
+                return result.First().foo;
             }
         }
     }
