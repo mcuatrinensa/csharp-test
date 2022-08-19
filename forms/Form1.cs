@@ -16,5 +16,12 @@ namespace forms
         {
             InitializeComponent();
         }
+
+        private async void dbtestBtn_Click(object sender, EventArgs e)
+        {
+            var result = await SampleDB.ExecuteQuery();
+            await Task.Yield();
+            MessageBox.Show(result);
+        }
     }
 }

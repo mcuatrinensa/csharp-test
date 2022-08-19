@@ -33,6 +33,7 @@
             this.form11 = new forms.Form1();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.form21 = new forms.Form2();
+            this.z80_Navigation1 = new Z80NavBarControl.Z80_Navigation();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -44,11 +45,11 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Location = new System.Drawing.Point(206, 0);
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(800, 450);
+            this.tabControl1.Size = new System.Drawing.Size(398, 381);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -56,7 +57,7 @@
             this.tabPage1.Controls.Add(this.form11);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(792, 421);
+            this.tabPage1.Size = new System.Drawing.Size(390, 352);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Form1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -66,7 +67,7 @@
             this.form11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.form11.Location = new System.Drawing.Point(0, 0);
             this.form11.Name = "form11";
-            this.form11.Size = new System.Drawing.Size(792, 421);
+            this.form11.Size = new System.Drawing.Size(390, 352);
             this.form11.TabIndex = 0;
             // 
             // tabPage2
@@ -74,7 +75,7 @@
             this.tabPage2.Controls.Add(this.form21);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(792, 421);
+            this.tabPage2.Size = new System.Drawing.Size(596, 352);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Form2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -84,15 +85,28 @@
             this.form21.Dock = System.Windows.Forms.DockStyle.Fill;
             this.form21.Location = new System.Drawing.Point(0, 0);
             this.form21.Name = "form21";
-            this.form21.Size = new System.Drawing.Size(792, 421);
+            this.form21.Size = new System.Drawing.Size(596, 352);
             this.form21.TabIndex = 0;
+            // 
+            // z80_Navigation1
+            // 
+            this.z80_Navigation1.AutoVerticalScrollBar = false;
+            this.z80_Navigation1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.z80_Navigation1.IconLocation = new System.Drawing.Point(8, 8);
+            this.z80_Navigation1.Location = new System.Drawing.Point(0, 0);
+            this.z80_Navigation1.Name = "z80_Navigation1";
+            this.z80_Navigation1.ShowItemsBorder = false;
+            this.z80_Navigation1.ShowSelectedGlyph = true;
+            this.z80_Navigation1.Size = new System.Drawing.Size(206, 381);
+            this.z80_Navigation1.TabIndex = 1;
             // 
             // AppForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(604, 381);
             this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.z80_Navigation1);
             this.Name = "AppForm";
             this.ShowIcon = false;
             this.Text = "AppForm";
@@ -110,6 +124,7 @@
         private System.Windows.Forms.TabPage tabPage2;
         private forms.Form1 form11;
         private forms.Form2 form21;
+        private Z80NavBarControl.Z80_Navigation z80_Navigation1;
     }
 }
 
